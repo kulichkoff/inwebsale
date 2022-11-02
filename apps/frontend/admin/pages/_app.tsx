@@ -1,17 +1,20 @@
+import { NextPage } from 'next';
 import { AppProps } from 'next/app';
-import Head from 'next/head';
+import { ReactElement, ReactNode } from 'react';
 
-function CustomApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Head>
-        <title>Welcome to frontend/admin!</title>
-      </Head>
-      <main>
-        <Component {...pageProps} />
-      </main>
-    </>
-  );
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode
 }
 
-export default CustomApp;
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout
+}
+
+function AdminApp({ Component, pageProps }: AppPropsWithLayout) {
+  // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout ?? ((page) => page)
+
+  return getLayout(<Component {...pageProps} />)
+}
+
+export default AdminApp;
