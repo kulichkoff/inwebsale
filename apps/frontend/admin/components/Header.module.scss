@@ -1,0 +1,46 @@
+@use '/apps/frontend/admin/styles/colors.scss';
+@use '/apps/frontend/admin/styles/fonts.scss';
+
+.header {
+  background-color: colors.$col-main;
+
+  width: 100vw;
+  height: 74px;
+
+  border-radius: 0px 0px 43px 43px;
+
+  padding: 0 64px 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+}
+
+.links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 146px;
+
+  font-family: fonts.$font-poppins;
+
+  li {
+    color: #fff;
+  }
+}
+
+.active {
+    opacity: .66;
+}
+
+.profile {
+  min-width: 240px;
+}

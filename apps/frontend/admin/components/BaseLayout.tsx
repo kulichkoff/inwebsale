@@ -1,9 +1,10 @@
 import React from 'react';
+import { Header } from './Header';
 
 export default function BaseLayout({ children }) {
   return (
     <>
-      <header>it is a layout</header>
+      <Header />
       <main>{children}</main>
     </>
   );

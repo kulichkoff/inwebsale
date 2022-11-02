@@ -5,7 +5,7 @@ import { NextPageWithLayout } from '../_app';
 const Events: NextPageWithLayout = () => {
   return (
     <>
-      <div className="container"></div>
+      <div className="container">events page works</div>
     </>
   );
 };
