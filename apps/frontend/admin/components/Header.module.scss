@@ -43,4 +43,25 @@
 
 .profile {
   min-width: 240px;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.profile__avatar {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(192, 192, 192);
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.profile__email {
+  margin-right: 16px;
+  color: #fff;
+}
+
+.profile__exit {
+  margin: auto 0;  
 }

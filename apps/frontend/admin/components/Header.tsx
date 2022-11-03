@@ -29,7 +29,11 @@ export const Header = () => {
         </div>
 
         <div className={styles.profile}>
-          {/* TODO */}
+          <div className={styles.profile__avatar}></div>
+          <div className={styles.profile__email}>admin@okguru.com</div>
+          <div className={styles.profile__exit}>
+            <Image src="/assets/img/icons/log-out.svg" alt="log out" width="24" height="24" />
+          </div>
         </div>
       </div>
     </header>
