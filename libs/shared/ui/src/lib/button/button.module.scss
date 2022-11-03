@@ -1,7 +1,23 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+@use '../../styles/colors';
+@use '../../styles/fonts';
+
+.btn {
+  color: #fff;
+  background-color: colors.$col-main;
+  border-radius: 5px;
+  border: none;
+  width: 225px;
+  height: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  span {
+    text-align: center;
+    font: 16px fonts.$font-inter;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+}
